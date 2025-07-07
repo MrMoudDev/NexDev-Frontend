@@ -1,1 +1,53 @@
-<p>register works!</p>
+<form 
+    class="form form-register"
+    [formGroup]="formData"
+    (click)="onSubmit()"
+>
+    <h1>Register</h1>
+    <div class="form-content">
+        <div class="field">
+            <label for="email">Email *</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email"
+            />
+            <div class="error">
+                Mensaje de error
+            </div>
+        </div>
+        <div class="field">
+            <label for="password">Password *</label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password"
+            />
+            <div class="error">
+                Mensaje de error
+            </div>
+        </div>
+        <div class="field">
+            <label for="rol">Rol *</label>
+            <select name="rol" id="rol">
+                <option value="">Seleccione...</option>
+                @for (rol of roles; track $index) {
+                    <option [value]="rol">{{ rol.toUpperCase() }}</option>
+                }
+            </select>
+            <div class="error">
+                Mensaje de error
+            </div>
+        </div>
+
+        <!-- <div class="field">
+            <span class="message">{{ message }}</span>
+        </div> -->
+        
+        <div class="field">
+            <button 
+                type="submit"
+            >Register</button>
+        </div>
+    </div>
+</form>
