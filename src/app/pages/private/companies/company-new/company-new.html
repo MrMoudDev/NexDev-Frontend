@@ -1,1 +1,25 @@
-<p>company-new works!</p>
+<form 
+    [formGroup]="formData"
+    (ngSubmit)="onSubmit()"
+>
+    <div class="field">
+        <label for="company-name">Nombre de la empresa</label>
+        <input type="text" formControlName="nombre" id="company-name">
+    </div>
+    <div class="field">
+        <label for="company-description">Descripcion de la empresa</label>
+        <textarea formControlName="descripcion" id="company-description"></textarea>
+    </div>
+    <div class="field">
+        <label for="company-logo">Logo de la empresa</label>
+        <input type="text" formControlName="logoUrl" id="company-logo">
+    </div>
+    <div class="field">
+        <label for="company-website">Sitio web de la empresa</label>
+        <input type="text" formControlName="sitioWeb" id="company-website">
+    </div>
+    <div class="field">
+        <button type="submit">Registrar compañia</button>
+    </div>
+
+</form>
