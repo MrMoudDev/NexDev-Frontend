@@ -16,7 +16,7 @@ export const routes: Routes = [
     {path: 'admin/users',component: Users},
     {path: 'admin/companies',component: Companies},
     {path: 'admin/users/new',component: UsersNew},
-    {path: 'admin/users/edit',component: UsersEdit},
+    {path: 'admin/users/edit/:id',component: UsersEdit},
     {path: 'admin/companies/new',component: CompanyNew},
     {path: 'admin/companies/edit',component: CompanyEdit},
     {path: '**', redirectTo:"home", pathMatch: "full"},

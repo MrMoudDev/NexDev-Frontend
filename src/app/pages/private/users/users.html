@@ -1,1 +1,31 @@
-<p>users works!</p>
+<!-- <pre>{{users}}</pre> -->
+
+@if (users.length > 0) {
+    <table border="1">
+        <thead>
+            <tr>
+                <th>email</th>
+                <th>password</th>
+                <th>rol</th>
+                <th>acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (user of users; track $index) {
+                <tr>
+                    <td>{{ user.email}}</td>
+                    <td>{{ user.password}}</td>
+                    <td>{{ user.rol }}</td>
+                    <td>
+                        <a class="btn btn-edit" href="#" [routerLink]=
+                        "['/admin','users','edit', user._id]">Editar</a>
+                        <a class="btn btn-delete" href="#" (click)="onDelete(user._id); $event.preventDefault()">ELiminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@else {
+    <p>No hay usuarios registrados</p>
+}

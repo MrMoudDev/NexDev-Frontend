@@ -27,3 +27,18 @@
         font-style: italic;
     }
 }/* You can add global styles to this file, and also import other style files */
+
+.btn {
+    border: 1px solid transparent;
+    padding: .5rem;
+    text-decoration: none;
+
+     .btn-edit {
+        background: green;
+        color: black;
+     }
+     .btn-delete {
+        background: red;
+        color: indianred;
+     }
+}

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { User } from '../../../../services/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users-new',
@@ -12,7 +13,8 @@ export class UsersNew {
   public formData!: FormGroup;
   public roles: string[] = [ 'company', 'developer' ];
 
-  constructor( private userService:User) {
+  constructor( private userService:User,
+    private router: Router) {
     this.formData = new FormGroup({
       email: new FormControl(),
       password: new FormControl(),
@@ -43,7 +45,7 @@ export class UsersNew {
       console.log( this.formData.value);
       this.userService.registerUser(this.formData.value).subscribe({
         next: (data) => {
-          console.log(data);
+          this.router.navigateByUrl('/admin/users');
         },
         error: (error) => {
           console.error(error)

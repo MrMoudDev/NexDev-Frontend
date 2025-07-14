@@ -32,7 +32,7 @@
 
         <!-- Condicionamos el despliegue de los campos adicionales de acuerdo al rol -->
         @if ( formData.get( 'rol' )?.value === 'developer' ) {
-            <div 
+            <div
                 class="form-developer" 
                 formGroupName="developer"
             >
@@ -87,7 +87,7 @@
                         Mensaje de error
                     </div>
                 </div>
-                <div class="field">
+                <div class="field">     
                     <label for="company-description">Descripcion de la Empresa *</label>
                     <textarea id="company-description" formControlName="descripcion" placeholder="Breve descripcion de la compañia"></textarea>
                     <div class="error">
