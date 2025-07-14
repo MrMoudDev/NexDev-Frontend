@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+
+import { Company } from '../../../../services/company';
+
 
 @Component({
   selector: 'app-company-new',
@@ -10,7 +14,10 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class CompanyNew {
   formData!: FormGroup;
 
-  constructor() {
+  constructor(
+    private companyService: Company,
+    private router: Router
+  ) {
     // Declarar formulario donde se van a agrupar los campos
     this.formData = new FormGroup({
       nombre: new FormControl( '', [ Validators.required ] ),   // Definir una campo para el formulario
@@ -24,7 +31,22 @@ export class CompanyNew {
     // Verificando su el formulario es valido
     if( this.formData.valid ) {
       console.log( this.formData.value );
-      this.formData.reset();
+
+      // Invocamos el servicio que se encarga de registrar la compania
+      this.companyService.registerCompany( this.formData.value ).subscribe({
+        next: ( data ) => {
+          console.log( data );
+          // this.router.navigate( ['/admin', 'companies'] );
+          this.router.navigateByUrl( '/admin/companies' );
+        },
+        error: ( error ) => {
+          console.error( error );
+        },
+        complete: () => {
+          console.log( 'Complete' );
+          this.formData.reset();
+        }
+      });
     }
   }
 }

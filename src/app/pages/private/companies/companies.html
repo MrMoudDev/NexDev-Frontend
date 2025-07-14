@@ -1,1 +1,37 @@
-<p>companies works!</p>
+<!-- <pre>{{ companies | json }}</pre> -->
+
+<h1>Listado de compañias</h1>
+
+@if( companies.length > 0 ) {
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Logo</th>
+        <th>Información</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for ( company of companies; track $index ) {
+        <tr>
+          <td>
+            <a class="company-link" [href]="company.sitioWeb" target="_blank">
+              <img class="company-logo" [src]="company.logoUrl" [alt]="company.nombre">
+            </a>
+          </td>
+          <td>
+            <a class="company-link" [href]="company.sitioWeb" target="_blank">{{ company.nombre }}</a>
+            <p>{{ company.descripcion }}</p>
+          </td>
+          <td>
+            <a class="btn btn-edit" href="#" [routerLink]="['/admin','companies','edit', company._id ]">Editar</a>
+            <a class="btn btn-delete" href="#" (click)="onDelete(company._id); $event.preventDefault();">Eliminar</a>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}
+@else {
+  <p>No hay compañias registradas.</p>
+}

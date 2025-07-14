@@ -1,0 +1,17 @@
+.btn {
+    border: 1px solid transparent;
+    padding: .5rem;
+    text-decoration: none;
+
+    .btn-edit {
+        background: lightgreen;
+        color: green;
+    }
+
+    .btn-delete {
+      background: indianred;
+      color: darkred;
+    }
+}
+
+
