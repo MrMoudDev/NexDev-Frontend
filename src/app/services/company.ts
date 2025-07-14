@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class Company {
 
+<<<<<<< HEAD
   constructor( private http:HttpClient ) { }
 
   registerUser ( newUser: any ) {
@@ -23,4 +24,19 @@ export class Company {
   updateByIdUser ( Id: string, updateUser:any ) {
     return this.http.delete( 'http://localhost:3000/api/users/' + Id, updateUser)
   }
+=======
+  constructor( private http: HttpClient ) { }
+
+  registerCompany( newCompany: any ) {
+    this.http.post( 'http://localhost:3000/api/company', newCompany )
+  }
+
+  getCompanies() {}
+
+  getCompanyById() {}
+
+  deleteCompanyById() {}
+
+  updateCompanyById() {}
+>>>>>>> 501ed341f815f3dbd7b419b0894b38b1019b3ee0
 }
