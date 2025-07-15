@@ -14,7 +14,7 @@ export class Company {
     console.log( newCompany );
 
     return this.http.post('http://localhost:3000/api/company', newCompany);
-  }
+ }
 
   getCompanies() {
     return this.http.get<any>('http://localhost:3000/api/company');
