@@ -1,0 +1,32 @@
+<!-- <pre>{{users}}</pre> -->
+
+@if (vacant.length > 0) {
+    <table border="1">
+        <thead>
+            <tr>
+                <th>email</th>
+                <th>password</th>
+                <th>rol</th>
+                <th>acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (user of vacant; track $index) {
+                <tr>
+                    <td>{{ user.titulo}}</td>
+                    <td>{{ user.descripcion}}</td>
+                    <td>{{ user.tecnologias }}</td>
+                    <td>
+                        <button (click)="a()">aplicar</button>
+                        <!-- <a class="btn btn-edit" href="#" [routerLink]=
+                        "['/admin','users','edit', user._id]">aplicar</a> -->
+                        <!-- <a class="btn btn-delete" href="#" (click)="onDelete(user._id); $event.preventDefault()">ELiminar</a> -->
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@else {
+    <p>No hay vacantes registrados</p>
+}

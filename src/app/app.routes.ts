@@ -9,6 +9,7 @@ import { Companies } from './pages/private/companies/companies';
 import { CompanyNew } from './pages/private/companies/company-new/company-new';
 import { CompanyEdit } from './pages/private/companies/company-edit/company-edit';
 import { Developers } from './pages/private/developer/developer';
+import { Vacants } from './pages/public/vacants/vacants';
 
 export const routes: Routes = [
     {path: 'home',component: Home},
@@ -16,11 +17,12 @@ export const routes: Routes = [
     {path: 'register',component: Register},
     {path: 'developer',component:Developers},
     {path: 'admin/users',component: Users},
+    {path: 'admin/vacant',component: Vacants},
     {path: 'admin/companies',component: Companies},
     {path: 'admin/users/new',component: UsersNew},
     {path: 'admin/users/edit/:id',component: UsersEdit},
     {path: 'admin/companies/new',component: CompanyNew},
-    {path: 'admin/companies/edit',component: CompanyEdit},
+    {path: 'admin/companies/edit/:id',component: CompanyEdit},
     {path: '**', redirectTo:"home", pathMatch: "full"},
     {path: '', redirectTo:"home", pathMatch: "full"},
 ];
