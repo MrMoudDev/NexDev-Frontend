@@ -1,1 +1,119 @@
-<p>register works!</p>
+<form class="form form-register" [formGroup]="formData" (ngSubmit)="onSubmit()">
+    <h1>Register</h1>
+    <div class="form-content">
+        <div class="form-user">
+            <div class="field">
+                <label for="email">Email *</label>
+                <input type="email" id="email" formControlName="email" />
+                <div class="error">
+                    Mensaje de error
+                </div>
+            </div>
+            <div class="field">
+                <label for="password">Password *</label>
+                <input type="password" id="password" formControlName="password" />
+                <div class="error">
+                    Mensaje de error
+                </div>
+            </div>
+            <div class="field">
+                <label for="rol">Rol *</label>
+                <select formControlName="rol" id="rol">
+                    <option value="">Seleccione...</option>
+                    @for (rol of roles; track $index) {
+                    <option [value]="rol">{{ rol.toUpperCase() }}</option>
+                    }
+                </select>
+                <div class="error">
+                    Mensaje de error
+                </div>
+            </div>
+        </div>
+
+        <!-- Condicionamos el despliegue de los campos adicionales de acuerdo al rol -->
+        @if ( formData.get( 'rol' )?.value === 'developer' ) {
+            <div
+                class="form-developer" 
+                formGroupName="developer"
+            >
+                <h2>Datos del desarrollador</h2>
+                <div class="field">
+                    <label for="developer-name">Nombres *</label>
+                    <input type="text" id="developer-name" formControlName="nombre" />
+                    <div class="error">
+                        Mensaje de error
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="developer-stack">Stack *</label>
+                    <input type="text" id="developer-stack" formControlName="stack" />
+                    <div class="error">
+                        Mensaje de error
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="developer-experience">Experiencia *</label>
+                    <input type="text" id="developer-experience" formControlName="experiencia" />
+                    <div class="error">
+                        Mensaje de error
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="developer-url-portfolio">Url Portafolio *</label>
+                    <input type="text" id="developer-url-portfolio" formControlName="portafolioUrl" />
+                    <div class="error">
+                        Mensaje de error
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="developer-url-cv">Url Curriculum *</label>
+                    <input type="text" id="developer-url-cv" formControlName="cvUrl" />
+                    <div class="error">
+                        Mensaje de error
+                    </div>
+                </div>
+            </div>
+        }
+        @if ( formData.get( 'rol' )?.value === 'company' ) {
+            <div 
+                class="form-company" 
+                formGroupName="company"
+            >
+                <h2>Datos de la compañia</h2>
+                <div class="field">
+                    <label for="company-name">Nombre de la Empresa *</label>
+                    <input type="text" id="company-name" formControlName="nombre" />
+                    <div class="error">
+                        Mensaje de error
+                    </div>
+                </div>
+                <div class="field">     
+                    <label for="company-description">Descripcion de la Empresa *</label>
+                    <textarea id="company-description" formControlName="descripcion" placeholder="Breve descripcion de la compañia"></textarea>
+                    <div class="error">
+                        Mensaje de error
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="company-url-logo">Url del logo de la Empresa *</label>
+                    <input type="text" id="company-url-logo" formControlName="logoUrl" />
+                    <div class="error">
+                        Mensaje de error
+                    </div>
+                </div>
+                    <div class="field">
+                    <label for="company-url-web">Url sitio web de la Empresa *</label>
+                    <input type="text" id="company-url-web" formControlName="sitioWeb" />
+                    <div class="error">
+                        Mensaje de error
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="form-content">
+        <div class="field">
+            <button type="submit">Register</button>
+        </div>
+    </div>
+</form>
