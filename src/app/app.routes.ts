@@ -8,11 +8,13 @@ import { UsersEdit } from './pages/private/users/users-edit/users-edit';
 import { Companies } from './pages/private/companies/companies';
 import { CompanyNew } from './pages/private/companies/company-new/company-new';
 import { CompanyEdit } from './pages/private/companies/company-edit/company-edit';
+import { Developers } from './pages/private/developer/developer';
 
 export const routes: Routes = [
     {path: 'home',component: Home},
     {path: 'login',component: Login},
     {path: 'register',component: Register},
+    {path: 'developer',component:Developers},
     {path: 'admin/users',component: Users},
     {path: 'admin/companies',component: Companies},
     {path: 'admin/users/new',component: UsersNew},

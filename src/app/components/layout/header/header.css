@@ -1,0 +1,48 @@
+.container {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 80vw;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+a.logo-site-left {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+ul.menu-main {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.menu-link-5.btn.btn-of-sign {
+    /* padding: .2rem; */
+    border-radius: .5rem;
+    color: black;
+    background: white;
+    font-weight: unset;
+    width: 5rem;
+    text-align: center;
+    border: .1rem black solid;
+}
+
+.menu-link-6.btn.btn-of-register {
+    border-radius: .5rem;
+    width: 5rem;
+    background: #2C2c2c;
+    color: white;
+    text-align: center;
+}

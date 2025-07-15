@@ -1,6 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Formularios */
+html{
+    margin: 0;
+    padding: auto;
+    height: 100%;
+}
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+}
 .form h1 {
     text-align: center;
 }
