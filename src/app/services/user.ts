@@ -14,6 +14,10 @@ export class User {
   getUser ( ) {
     return this.http.get<any>( 'http://localhost:3000/api/users')
   }
+  getUserByRol(rol:string){
+    return this.http.get<any>( 'http://localhost:3000/api/users/rol/'+rol)
+  }
+
   getUserById ( id:string ) {
     return this.http.get<any>( 'http://localhost:3000/api/users/' + id)
   }

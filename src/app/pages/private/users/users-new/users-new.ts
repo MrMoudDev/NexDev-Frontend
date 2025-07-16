@@ -43,9 +43,10 @@ export class UsersNew {
   onSubmit() {
     if( this.formData.valid ) {
       console.log( this.formData.value);
+      // console.log(this.formData.get("rol")?.value)
       this.userService.registerUser(this.formData.value).subscribe({
         next: (data) => {
-          this.router.navigateByUrl('/admin/users');
+          this.router.navigate(['/admin','users',this.formData.get("rol")?.value]);
         },
         error: (error) => {
           console.error(error)

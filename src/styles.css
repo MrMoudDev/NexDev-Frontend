@@ -12,7 +12,7 @@ body{
     padding: 0;
     height: 100%;
 }
-.form h1 {
+/* .form h1 {
     text-align: center;
 }
 
@@ -37,7 +37,7 @@ body{
         color: red;
         font-style: italic;
     }
-}/* You can add global styles to this file, and also import other style files */
+}You can add global styles to this file, and also import other style files */
 
 .btn {
     border: 1px solid transparent;
