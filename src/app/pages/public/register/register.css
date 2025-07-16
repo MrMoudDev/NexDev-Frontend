@@ -5,3 +5,26 @@ form.form.form-register{
     justify-content: center;
     align-items: center;
 }
+
+.field {
+    margin: 1rem;
+}
+
+.input-register{
+    border-radius: .3rem;
+    border: black .1rem solid;
+    padding: .4rem;
+}
+
+.select-rol{
+    width: 8rem;
+    border-radius: .4rem;
+    height: 2rem;
+}
+
+.input-button{
+    width: 11rem;
+    height: 2rem;
+    border-radius: .4rem;
+    border: .1rem transparent;
+}

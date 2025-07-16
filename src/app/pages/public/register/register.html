@@ -3,20 +3,20 @@
     <div class="form-content">
         <div class="form-user">
             <div class="field">
-                <input type="email" id="email" formControlName="email" placeholder="Email" />
+                <input class="input-register" type="email" id="email" formControlName="email" placeholder="Email" />
                 <div class="error">
                     <!-- Mensaje de error -->
                 </div>
             </div>
             <div class="field">
-                <input type="password" id="password" formControlName="password" placeholder="Password"/>
+                <input class="input-register" type="password" id="password" formControlName="password" placeholder="Password"/>
                 <div class="error">
                     <!-- Mensaje de error -->
                 </div>
             </div>
             <div class="field">
-                <label for="rol">Rol *</label>
-                <select formControlName="rol" id="rol">
+                <label for="rol">Rol </label>
+                <select class="select-rol" formControlName="rol" id="rol">
                     <option value="">Seleccione...</option>
                     @for (rol of roles; track $index) {
                     <option [value]="rol">{{ rol.toUpperCase() }}</option>
@@ -37,35 +37,35 @@
                 <h2>Datos del desarrollador</h2>
                 <div class="field">
                     <label for="developer-name">Nombres *</label>
-                    <input type="text" id="developer-name" formControlName="nombre" />
+                    <input class="input-register" type="text" id="developer-name" formControlName="nombre" />
                     <div class="error">
                         Mensaje de error
                     </div>
                 </div>
                 <div class="field">
                     <label for="developer-stack">Stack *</label>
-                    <input type="text" id="developer-stack" formControlName="stack" />
+                    <input class="input-register" ctype="text" id="developer-stack" formControlName="stack" />
                     <div class="error">
                         Mensaje de error
                     </div>
                 </div>
                 <div class="field">
                     <label for="developer-experience">Experiencia *</label>
-                    <input type="text" id="developer-experience" formControlName="experiencia" />
+                    <input class="input-register" type="text" id="developer-experience" formControlName="experiencia" />
                     <div class="error">
                         Mensaje de error
                     </div>
                 </div>
                 <div class="field">
                     <label for="developer-url-portfolio">Url Portafolio *</label>
-                    <input type="text" id="developer-url-portfolio" formControlName="portafolioUrl" />
+                    <input class="input-register" type="text" id="developer-url-portfolio" formControlName="portafolioUrl" />
                     <div class="error">
                         Mensaje de error
                     </div>
                 </div>
                 <div class="field">
                     <label for="developer-url-cv">Url Curriculum *</label>
-                    <input type="text" id="developer-url-cv" formControlName="cvUrl" />
+                    <input class="input-register" type="text" id="developer-url-cv" formControlName="cvUrl" />
                     <div class="error">
                         Mensaje de error
                     </div>
@@ -80,7 +80,7 @@
                 <h2>Datos de la compañia</h2>
                 <div class="field">
                     <label for="company-name">Nombre de la Empresa *</label>
-                    <input type="text" id="company-name" formControlName="nombre" />
+                    <input class="" type="text" id="company-name" formControlName="nombre" />
                     <div class="error">
                         Mensaje de error
                     </div>
@@ -94,14 +94,14 @@
                 </div>
                 <div class="field">
                     <label for="company-url-logo">Url del logo de la Empresa *</label>
-                    <input type="text" id="company-url-logo" formControlName="logoUrl" />
+                    <input class="input-register" type="text" id="company-url-logo" formControlName="logoUrl" />
                     <div class="error">
                         Mensaje de error
                     </div>
                 </div>
                     <div class="field">
                     <label for="company-url-web">Url sitio web de la Empresa *</label>
-                    <input type="text" id="company-url-web" formControlName="sitioWeb" />
+                    <input class="input-register" type="text" id="company-url-web" formControlName="sitioWeb" />
                     <div class="error">
                         Mensaje de error
                     </div>
@@ -109,9 +109,7 @@
             </div>
         }
     </div>
-    <div class="form-button">
         <div class="field">
-            <button type="submit">Register</button>
+            <button class="input-button" type="submit">Register</button>
         </div>
-    </div>
 </form>
