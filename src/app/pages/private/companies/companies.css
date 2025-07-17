@@ -96,6 +96,7 @@
     margin-left: 5rem;
     align-content: center;
     margin-top: .8rem;
+    text-align: center;
 }
 
 img {
@@ -105,9 +106,10 @@ img {
     margin-top: .5rem;
 }
 
-
 h2 {
+    text-decoration: none;
     font-family: Impact, Charcoal, sans-serif;
+    font-size: 2rem;
     color: white;
     margin: 0;
     font-weight: 30;
@@ -119,7 +121,7 @@ h3 {
     color: white;
     font-weight: 30;
     margin-top: 3rem;
-    /* font-size: 1rem; */
+    font-size: 1.2rem;
     margin: 0;
 }
 
@@ -250,14 +252,20 @@ footer a {
     height: 50%;
 }
 .btn-edit {
-    background: lightgreen;
+    font-family: sans-serif;
+    background-color: #38433b;
     color: green;
     width: 3.5rem;
     text-align: center;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
 }
 .btn-delete {
-    background: indianred;
+    font-family:  sans-serif;
+    background-color: #d14a3b;
     color: darkred;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
+}
+a{
+    color: white;
+    text-decoration: none;
 }
