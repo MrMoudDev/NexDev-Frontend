@@ -13,7 +13,8 @@ export class Register {
   public formData!: FormGroup;
   public roles: string[] = [ 'company', 'developer' ];
 
-  constructor( private userService:User,
+  constructor( 
+    private userService:User,
     private router: Router) {
     this.formData = new FormGroup({
       email: new FormControl(),
