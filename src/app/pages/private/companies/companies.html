@@ -1,10 +1,19 @@
 <!-- <pre>{{ companies | json }}</pre> -->
+     <video class="Video-container" controls autoplay>
+  <source src="videos/keyboard.mp4" type="video/mp4" />
+  <p>
+    Su navegador no soporta video HTML5. Aquí hay un
+    <a href="videos/keyboard.mp4">enlace al video</a>.
+  </p>
+</video>
 <div class="container">
+  
 <h1>Listado de compañias</h1>
 
 @if( companies.length > 0 ) {
     <tbody>
       @for ( company of companies; track $index ) {
+        
         <div class="container-empresas tercera">
           
           <div class="tipo-de-trabajo">
@@ -21,10 +30,13 @@
             </div>
           </div>
         </div>
+        
       }
     </tbody>
+
 }
 @else {
   <p>No hay compañias registradas.</p>
 }
+
 </div>

@@ -269,3 +269,8 @@ a{
     color: white;
     text-decoration: none;
 }
+
+.Video-container {
+    position: fixed;
+    z-index: -1;
+}
