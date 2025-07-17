@@ -11,6 +11,7 @@ import { CompanyEdit } from './pages/private/companies/company-edit/company-edit
 import { Developers } from './pages/private/developer/developer';
 import { Vacants } from './pages/public/vacants/vacants';
 import { VacantsNew } from './pages/private/vacants-new/vacants-new';
+// import { User } from './services/user';
 
 export const routes: Routes = [
     {path: 'home',component: Home},
@@ -21,7 +22,7 @@ export const routes: Routes = [
     {path: 'admin/companies',component: Companies},
     {path: 'admin/users/new',component: UsersNew}, 
     {path: 'admin/new/vacant',component: VacantsNew},
-
+    {path: "admin/user/company", component: Companies},
     {path: 'admin/users/:rol',component: Users}, 
     {path: 'admin/users/edit/:id',component: UsersEdit},
     {path: 'admin/companies/new',component: CompanyNew},

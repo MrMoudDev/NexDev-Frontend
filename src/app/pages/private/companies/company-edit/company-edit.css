@@ -1,0 +1,73 @@
+.compapy-edit {
+    height: 100vh;
+}
+
+/* form.form.form-register{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.field {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.form-content {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0,0.4);
+    border: .1rem solid black;
+    border-radius: 1rem;
+    margin-top: 8rem;
+    width: 27rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.form-user {
+    height: 14rem;
+}
+
+.input-register-company{
+    border-radius: .3rem;
+    border: white .1rem solid;
+    padding: .4rem;
+    background-color: #0000;
+    color: white;
+    height: 1.7rem;
+    width: 15rem;
+    font-size: 1.3rem;
+}
+
+.select-rol{
+    width: 12rem;
+    border-radius: .4rem;
+    height: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.input-button{
+    width: 11rem;
+    height: 2rem;
+    border-radius: .4rem;
+    border: .1rem transparent;
+    height: 2.6rem;
+    margin: 2rem;
+    font-size: 1.3rem;
+}
+.Video-container {
+    position: fixed;
+    z-index: -1;
+}
+
+form.ng-untouched.ng-pristine.ng-valid {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    left: 50%;
+    color: white;
+}  */
+

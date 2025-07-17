@@ -47,7 +47,7 @@ export class Register {
       this.userService.registerUser(this.formData.value).subscribe({
         next: (data) => {
           console.log(data)
-          this.router.navigateByUrl('/login');
+          this.router.navigateByUrl('/admin/user/company');
         },
         error: (error) => {
           console.error(error)
