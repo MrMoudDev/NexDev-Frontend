@@ -11,6 +11,9 @@ export class User {
   registerUser ( newUser: any ) {
     return this.http.post( 'http://localhost:3000/api/users', newUser )
   }
+    loginUser ( user: any ) {
+    return this.http.post( 'http://localhost:3000/api/users/login', user )
+  }
   getUser ( ) {
     return this.http.get<any>( 'http://localhost:3000/api/users')
   }
