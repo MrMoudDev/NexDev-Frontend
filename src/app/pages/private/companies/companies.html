@@ -1,37 +1,49 @@
 <!-- <pre>{{ companies | json }}</pre> -->
-
+<div class="container">
 <h1>Listado de compañias</h1>
 
 @if( companies.length > 0 ) {
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Logo</th>
-        <th>Información</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
     <tbody>
       @for ( company of companies; track $index ) {
-        <tr>
-          <td>
-            <a class="company-link" [href]="company.sitioWeb" target="_blank">
-              <img class="company-logo" [src]="company.logoUrl" [alt]="company.nombre">
-            </a>
-          </td>
-          <td>
-            <a class="company-link" [href]="company.sitioWeb" target="_blank">{{ company.nombre }}</a>
-            <p>{{ company.descripcion }}</p>
-          </td>
-          <td>
-            <a class="btn btn-edit" href="#" [routerLink]="['/admin','companies','edit', company._id ]">Editar</a>
-            <a class="btn btn-delete" href="#" (click)="onDelete(company._id); $event.preventDefault();">Eliminar</a>
-          </td>
-        </tr>
+        <div class="container-empresas tercera">
+          <div class="tipo-de-trabajo">
+            <div class="seccion-informacion">
+                <img class="company-logo" [src]="company.logoUrl" [alt]="company.nombre">
+              <div class="info-name">
+                <h2><a class="company-link" [href]="company.sitioWeb" target="_blank">{{ company.nombre }}</a></h2>
+                <div class="c-descripcion"><h3>{{ company.descripcion }}</h3></div>
+              </div>
+          </div>
+              <div class="fecha">
+              <a class="btn btn-edit" href="#" [routerLink]="['/admin','companies','edit', company._id ]">Editar</a>
+              <a class="btn btn-delete" href="#" (click)="onDelete(company._id); $event.preventDefault();">Eliminar</a>
+            </div>
+          </div>
+        </div>
       }
     </tbody>
-  </table>
 }
 @else {
   <p>No hay compañias registradas.</p>
 }
+
+        <div class="container-empresas tercera">
+            <div class="seccion-informacion">
+                <img src="/public/images/descargar.jpeg" alt="Foto de empresa">
+                <div class="info-name">
+                    <h2>Senior Softwear Engineer</h2>
+                    <h3>OpenLoop Lima-Peru (Hibrido)</h3>
+                </div>
+                <div class="tipo-de-trabajo">
+                    <ul>
+                      <li>full Time</li>
+                      <li>Remoto</li>
+                      <li>Salud</li>
+                    </ul>
+                </div>
+                <div class="fecha">
+                    <h4> may 20</h4>
+                </div>
+            </div>
+        </div>
+</div>

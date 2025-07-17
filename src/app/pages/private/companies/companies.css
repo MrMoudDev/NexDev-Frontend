@@ -1,3 +1,263 @@
 .company-logo {
     width: 5rem;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column  ;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1240px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.container-text {
+    text-align: center;
+}
+
+.text-title {
+    margin: 0;
+    margin-top: .5rem;
+    font-weight: 400;
+    font-size: 2rem;
+    color: black;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    width: 70%;
+    margin-top: 1.1rem;
+
+}
+
+.filter-selec-link {
+    background-color: white;
+    text-align: center;
+    border-radius: .5rem;
+    margin: 0 1rem .5rem 0;
+    padding: .8rem;
+    border: .1rem solid gray;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.07);
+    font-weight: bold;
+}
+
+.filter-selec-link p{
+    margin: 0;
+}
+
+.container-buscadores {
+    display: flex;
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    align-items: center;
+}
+
+.barra-buscador {
+    padding: .6rem;
+    text-align: center;
+    border-radius: 2rem;
+    outline: none;
+    border: .1rem solid gray;
+    width: 20rem;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.07);
+}
+
+.container-empresas {
+    border: 1px solid gray;
+    height: 5rem;
+    width: 70rem;
+    margin: 2rem;
+    background-color: black;
+    border-radius: .6rem;
+}
+
+.seccion-informacion {
+    display: flex;
+    flex-direction: row;
+    height: 6rem;
+}
+
+.info-name {
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    width: 20rem;
+    gap: .4rem;
+    margin-left: 5rem;
+    align-content: center;
+    margin-top: .8rem;
+}
+
+img {
+    height: 4rem;
+    width: 4rem;
+    margin-left: 3rem;
+    margin-top: .5rem;
+}
+
+
+h2 {
+    font-family: Impact, Charcoal, sans-serif;
+    color: white;
+    margin: 0;
+    font-weight: 30;
+    /* font-size: 1.2rem; */
+}
+
+h3 {
+    font-family: sans-serif ;
+    color: white;
+    font-weight: 30;
+    margin-top: 3rem;
+    /* font-size: 1rem; */
+    margin: 0;
+}
+
+.c-description{
+    height: 3rem;
+    align-items: end;
+}
+
+.tipo-de-trabajo {
+    display: flex;
+    font-size: .8rem;
+    color: darkgray;
+    width: 100%; 
+    justify-content: space-between;
+}
+
+.beneficion {
+    width: 6rem;
+    height: 5rem;
+    margin-left: 14rem;
+    margin-top: .5rem;
+}
+
+.beneficion img {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    margin: .1rem;
+}
+
+.economicos {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    align-items: flex-start;
+}
+
+.fecha {
+    color: darkgray;
+    font-size: .9rem;
+    display: flex;
+    height: 2rem;
+    margin-top: 1.2rem;
+    margin-right: .8rem;
+    flex-direction: row;
+    width: 10rem;
+    justify-content: space-between;
+} 
+
+.segunda{
+    background-color: #EDDEA4;
+}
+
+.tercera{
+    font-weight: 50;
+    background-color: rgba(30, 30, 30, 0.90);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+}
+
+
+.cuarta{
+    background-color: #2D3142;
+}
+
+.quinta{
+    background-color: #945D5E;
+}
+
+.sexta{
+    background-color: #A4AC96;
+}
+
+.footer{
+    height: 20rem;
+    display: flex;
+}
+
+.redes {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    height: 40%;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 4rem;
+}
+
+.informacion{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+footer img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+footer li {
+    margin: .5rem;
+}
+
+h2.foote-informacion {
+    color: black;
+    margin: 1.5rem 0;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+footer a {
+    background-color: transparent;
+    text-decoration: none;
+    color: gray;
+}
+
+.nexdev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+.btn-edit {
+    background: lightgreen;
+    color: green;
+    width: 3.5rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+.btn-delete {
+    background: indianred;
+    color: darkred;
+    border-radius: 1rem;
+}
