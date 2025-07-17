@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    background-color: #F4F4F9;
+}
+
+.container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #00635D ;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background-color: #2176cb;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px #2CF6B3;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: #003B95;
+  transition: all 1s;
+  h2{
+    color: #FAF2A1;
+  }
+}
+
+.avatar {
+  border: 1px solid #60AFFF;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 10px 0 0px;
+}
+
+.role {
+  color: #FAF2A1    ;
+  margin-bottom: 15px;
+  font-style: italic;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.tags {
+  margin-bottom: 15px;
+}
+
+.tag {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  background-color: #F4F4F9;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.react {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.node {
+  border-color: #00635D;
+  color: #00635D;
+}
+
+.python {
+  border-color: #a3e635;
+  color: #a3e635;
+}
+
+.fab, .fas {
+    font-size: 1.5rem;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #00635D;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.filter-bar input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1.8px solid #00635D;
+  background-color: white;
+  color: #00635D;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 15px;
+}
+
+.tech-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  background-color: transparent;
+  border: 1.8px solid #00635D;
+  color: #00635D;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #00635D;
+  color: #F4F4F9;
+}
+

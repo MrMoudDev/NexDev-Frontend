@@ -1,31 +1,52 @@
 <!-- <pre>{{users}}</pre> -->
-
+<h1>holllaaa</h1>
+<div class="grid">
 @if (users.length > 0) {
-    <table border="1">
-        <thead>
-            <tr>
-                <th>email</th>
-                <th>password</th>
-                <th>rol</th>
-                <th>acciones</th>
-            </tr>
-        </thead>
-        <tbody>
             @for (user of users; track $index) {
-                <tr>
-                    <td>{{ user.email}}</td>
-                    <td>{{ user.password}}</td>
-                    <td>{{ user.rol }}</td>
-                    <td>
+                <div class="card">
+                    <img src="https://i.pravatar.cc/150?img=1" alt="Dev 1" class="avatar" />
+                    <h2>{{ user.email}}</h2>
+                    <p class="role">{{ user.rol }}</p>
+                    <div class="tags">
                         <a class="btn btn-edit" href="#" [routerLink]=
                         "['/admin','users','edit', user._id]">Editar</a>
                         <a class="btn btn-delete" href="#" (click)="onDelete(user._id); $event.preventDefault()">ELiminar</a>
-                    </td>
-                </tr>
+                    </div>
+                </div>
             }
-        </tbody>
-    </table>
+
 }
 @else {
     <p>No hay usuarios registrados</p>
 }
+    <div class="card">
+        <img src="https://i.pravatar.cc/150?img=1" alt="Dev 1" class="avatar" />
+        <h2>Santiago Velasquez</h2>
+        <p class="role">Full Stack Developer</p>
+        <div class="tags">
+        <span class="tag react">React</span>
+        <span class="tag node">Node.js</span>
+        <span class="tag python">Python</span>
+        </div>
+    <div class="socials">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pravatar.cc/150?img=2" alt="Dev 2" class="avatar" />
+        <h2>Camila Rojas</h2>
+        <p class="role">Frontend Developer</p>
+        <div class="tags">
+          <span class="tag react">React</span>
+          <span class="tag">Tailwind</span>
+        </div>
+        <div class="socials">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+</div>
