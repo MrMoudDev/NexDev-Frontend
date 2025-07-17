@@ -8,12 +8,31 @@ form.form.form-register{
 
 .field {
     margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.form-content {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0,0.4);
+    border: .1rem solid black;
+    border-radius: 1rem;
+    margin-top: 8rem;
+    width: 27rem;
+}
+
+.form-user {
+    height: 14rem;
 }
 
 .input-register{
     border-radius: .3rem;
-    border: black .1rem solid;
+    border: white .1rem solid;
     padding: .4rem;
+    background-color: #0000;
+    color: white;
+    height: 1.7rem;
+    width: 15rem;
 }
 
 .select-rol{
@@ -27,4 +46,11 @@ form.form.form-register{
     height: 2rem;
     border-radius: .4rem;
     border: .1rem transparent;
+    height: 2.6rem;
+    margin: 2rem;
 }
+.Video-container {
+    position: fixed;
+    z-index: -1;
+}
+
