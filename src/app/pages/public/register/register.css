@@ -19,6 +19,7 @@ form.form.form-register{
     border-radius: 1rem;
     margin-top: 8rem;
     width: 27rem;
+    font-family: "Montserrat", sans-serif;
 }
 
 .form-user {
@@ -33,12 +34,15 @@ form.form.form-register{
     color: white;
     height: 1.7rem;
     width: 15rem;
+    font-size: 1.3rem;
 }
 
 .select-rol{
-    width: 8rem;
+    width: 12rem;
     border-radius: .4rem;
     height: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
 }
 
 .input-button{
@@ -48,6 +52,7 @@ form.form.form-register{
     border: .1rem transparent;
     height: 2.6rem;
     margin: 2rem;
+    font-size: 1.3rem;
 }
 .Video-container {
     position: fixed;

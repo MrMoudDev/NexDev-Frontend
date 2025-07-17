@@ -17,8 +17,9 @@
     flex-direction: column;
     align-items: center;
     border-radius: 1rem;
-    height: 70%;
+    height: 24rem;
     width: 22rem;
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -56,4 +57,10 @@ h1 {
     display: flex;
     color: white;
     gap: 1rem;
+}
+
+.Video-container {
+    position: fixed;
+    z-index: -1;
+    position-area: y-start;
 }

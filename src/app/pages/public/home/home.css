@@ -16,10 +16,10 @@
 }
 
 .main-tex h1 {
-    font-family: "Fredoka", sans-serif;
+    font-family: "Montserrat", sans-serif;;
     font-size: 3rem;
     font-optical-sizing: auto;
-        font-weight: 200;
+    font-weight: bolder;
     font-style: normal;
     font-variation-settings: "wdth" 250;
 }
@@ -27,7 +27,9 @@
 .main-tex h2 {
     font-weight: 300;
     font-size: 1.6rem;
-    color: #757575;
+    color: white;
+    font-weight: bolder;
+    font-size: 2.1rem;
 }
 
 .buscador{
@@ -35,6 +37,7 @@
     justify-content: center;
     align-items: center;
     margin: 1rem;
+    font-family: "Montserrat", sans-serif;;
 }
 
 .buscador-barra {
@@ -61,6 +64,9 @@ form{
     width: 10rem;
     border: none;
     cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-size: 1.1rem;
 }
 
 .call-to-action {
@@ -77,6 +83,9 @@ form{
     outline: none;
     padding: .4rem;
     border: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+    font-size: 1.2rem
 }
 
 .btn.desarrolladores {
@@ -87,6 +96,8 @@ form{
     font-weight: 200;
     border: .1rem solid black;
     border-radius: .6rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
 }
 
 .btn.empresas {
@@ -96,6 +107,8 @@ form{
     font-weight: 200;
     border-radius: .6rem;
     width: 6rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
 }
 
 video.Video-container {
