@@ -15,7 +15,6 @@ export class Vacants {
 
     constructor ( private aplicationService: Vacant) {}
       ngOnInit () {
-        console.log('aaaaaaa')
         this.aplicationService.getVacant().subscribe({
           next: (data) => {
             this.vacant = data

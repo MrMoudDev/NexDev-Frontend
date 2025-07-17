@@ -1,13 +1,13 @@
-<form class="form-container">
+<form class="form-container" [formGroup]="formData" (ngSubmit)="onSubmit()">
     <div class="form-login">
         <h1>Iniciar Sesion</h1>
 
         <div class="field">
-            <input class="input-field" type="text" placeholder="Nombre o correo electronico">
+            <input class="input-field" type="text" placeholder="Nombre o correo electronico" formControlName="email">
         </div>
 
         <div class="field">
-            <input class="input-field" type="password" placeholder="Contraseña">
+            <input class="input-field" type="password" placeholder="Contraseña" formControlName="password">
         </div>
 
         <div class="field">

@@ -1,0 +1,38 @@
+<form class="form-container1" [formGroup]="formdata" (ngSubmit)="onSubmit()">
+    <div class="form-login">
+        <h1>Vacantes Nuevas</h1>
+
+        <div class="field">
+            <input class="input-field" type="text" placeholder="titulo" formControlName="titulo">
+        </div>
+
+        <div class="field">
+            <input class="input-field" type="text" placeholder="descripcion" formControlName="descripcion">
+        </div>
+        <div class="field">
+            <input class="input-field" type="text" placeholder="tecnologias" formControlName="tecnologias">
+        </div>
+        <div class="field">
+            <input class="input-field" type="text" placeholder="salario" formControlName="salario">
+        </div>
+        <div class="field">
+            <input class="input-field" type="text" placeholder="beneficios" formControlName="beneficios">
+        </div>
+        <div class="field">
+            <input class="input-field" type="text" placeholder="tareas" formControlName="tareas">
+        </div>
+        <div class="field">
+            <input class="input-field" type="text" placeholder="Fecha Publicacion" formControlName="fechaPublicacion">
+        </div>
+        <div class="field">
+            <input class="input-field" type="text" placeholder="Fecha Cierre" formControlName="fechaCierre">
+        </div>
+        <div class="check">
+            <input type="checkbox" type="radio">
+            <p>Remember me</p>
+        </div>
+        <div class="btn">
+            <button> crear</button>
+        </div>
+    </div>
+</form>
