@@ -15,8 +15,16 @@
     padding-top: 6rem;
 }
 
+.main-tex .text-Next {
+    color: #ffff;
+}
+.main-tex .text-dev {
+    color: #ffff;
+}
+
+
 .main-tex h1 {
-    font-family: "Montserrat", sans-serif;;
+    font-family: "Open Sans";
     font-size: 3rem;
     font-optical-sizing: auto;
     font-weight: bolder;
@@ -37,7 +45,7 @@
     justify-content: center;
     align-items: center;
     margin: 1rem;
-    font-family: "Montserrat", sans-serif;;
+    font-family: "Open Sans";
 }
 
 .buscador-barra {
@@ -64,7 +72,7 @@ form{
     width: 10rem;
     border: none;
     cursor: pointer;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans";
     font-weight: bolder;
     font-size: 1.1rem;
 }
@@ -83,7 +91,7 @@ form{
     outline: none;
     padding: .4rem;
     border: none;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans";
     font-weight: bolder;
     font-size: 1.2rem
 }
@@ -96,7 +104,7 @@ form{
     font-weight: 200;
     border: .1rem solid black;
     border-radius: .6rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans";
     font-weight: bolder;
 }
 
@@ -107,7 +115,7 @@ form{
     font-weight: 200;
     border-radius: .6rem;
     width: 6rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans";
     font-weight: bolder;
 }
 

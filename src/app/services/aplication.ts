@@ -1,21 +1,27 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class Aplication {
 
-  constructor( private http:HttpClient) { }
+  environment: any
+
+  constructor( private http:HttpClient, private userService:User) {
+    this.environment = environment
+   }
 
   registerAplication ( newAplication: any) {
-    return this.http.post( 'http://localhost:3000/api/aplication', newAplication)
+    return this.http.post( `${ this.environment.apiUrl }/aplication`, newAplication, { headers: this.userService.getHeaders() })
   }
   deleteByIdAplication ( id: string) {
-    return this.http.delete( 'http://localhost:3000/api/aplication' + id)
+    return this.http.delete( `${ this.environment.apiUrl }/aplication` + id, { headers: this.userService.getHeaders() })
   }
   getAplication (  ) {
-    return this.http.get<any>( 'http://localhost:3000/api/aplication'  )
+    return this.http.get<any>( `${ this.environment.apiUrl }/aplication`, { headers: this.userService.getHeaders() })
   }
 }
 
