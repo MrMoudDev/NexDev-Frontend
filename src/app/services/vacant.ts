@@ -1,19 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class Vacant {
-
-  constructor( private http:HttpClient) {}
+  enviroment: any
+  constructor( private http:HttpClient) {
+    this.enviroment = environment
+  }
 
     getVacant ( ) {
-    return this.http.get<any>( 'http://localhost:3000/api/vacant'  )
+    return this.http.get<any>( `${ this.enviroment.apiURL }/vacant`  )
   }
 
   registerVacant(vacant: any){
-    return this.http.post<any>( 'http://localhost:3000/api/vacant',vacant  )
+    return this.http.post<any>( `${ this.enviroment.apiURL }/vacant`,vacant  )
 
   }
 }
