@@ -30,15 +30,14 @@ export class Login {
   
   onSubmit() {
     if( this.formData.valid ) {
-      console.log( this.formData.value.email);
-      const data = {
-        email: this.formData.value.email,
-        password: this.formData.value.password
-      }
-      this.userService.loginUser(data).subscribe({
+      console.log( this.formData.value);
+
+      this.userService.loginUser(this.formData.value).subscribe({
         next: (data) => {
+          this.userService.saveLocalStorage('token', data.token)
+          this.userService.saveLocalStorage('authUser', JSON.stringify(data.user))
+          this.router.navigateByUrl('/developer');
           console.log(data)
-          // this.router.navigateByUrl('/login');
         },
         error: (error) => {
           console.error(error)
@@ -52,3 +51,4 @@ export class Login {
   }
 
 }
+
